@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101b19">
+<meta name="description" content="مصمم البطاقات الدينية الإسلامية">
+<title>بطاقتي الإيمانية | مصمم البطاقات</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">۞</span><span><b>بطاقتي الإيمانية</b><small>مصمم البطاقات الدينية</small></span></a>
+  <div class="top-actions">
+    <button class="ghost-btn" id="savedBtn">تصميماتي <span id="savedCount">0</span></button>
+    <button class="ghost-btn" id="themeBtn" aria-label="تغيير المظهر">☼</button>
+    <button class="primary-btn" id="exportTop">تصدير البطاقة ↓</button>
+  </div>
+</header>
+
+<main class="app-shell">
+  <section class="intro">
+    <div><span class="eyebrow">استوديو التصميم الإسلامي</span><h1>حوّل كلماتك إلى بطاقة<br><em>تستحق المشاركة.</em></h1><p>أدخل النصوص، اختر القالب، واترك مساحة الإبداع للتصميم.</p></div>
+    <div class="intro-seal">۞<small>ذكرٌ طيب<br>وأثرٌ جميل</small></div>
+  </section>
+
+  <div class="workspace">
+    <aside class="editor-panel">
+      <div class="panel-heading"><div><span class="step">01 / المحتوى</span><h2>محتوى البطاقة</h2></div><button class="text-btn" id="clearBtn">مسح الكل</button></div>
+
+      <label class="field-label" for="mainText">النص الأساسي <span>اختياري</span></label>
+      <textarea id="mainText" rows="4" placeholder="اكتب خاطرتك أو نصيحتك أو رسالتك هنا..."></textarea>
+
+      <div class="field-head"><label class="field-label" for="verseText">الآية القرآنية</label><label class="toggle"><input type="checkbox" id="verseEnabled" checked><span></span></label></div>
+      <textarea id="verseText" rows="3" placeholder="اكتب الآية القرآنية كما هي..."></textarea>
+      <div class="two-fields"><div><label class="mini-label" for="verseSource">السورة ورقم الآية</label><input id="verseSource" placeholder="مثال: البقرة، 286"></div><div><label class="mini-label" for="verseLabel">عنوان اختياري</label><input id="verseLabel" placeholder="من كتاب الله"></div></div>
+
+      <div class="field-head"><label class="field-label" for="hadithText">الحديث النبوي</label><label class="toggle"><input type="checkbox" id="hadithEnabled" checked><span></span></label></div>
+      <textarea id="hadithText" rows="3" placeholder="اكتب نص الحديث كما ورد..."></textarea>
+      <div class="two-fields"><div><label class="mini-label" for="hadithSource">المصدر والتخريج</label><input id="hadithSource" placeholder="مثال: رواه البخاري"></div><div><label class="mini-label" for="narrator">الراوي (اختياري)</label><input id="narrator" placeholder="اسم الراوي"></div></div>
+
+      <label class="field-label" for="quoteText">قول أو اقتباس <span>اختياري</span></label>
+      <textarea id="quoteText" rows="2" placeholder="قول عالم أو حكمة..."></textarea>
+      <input id="quoteAuthor" placeholder="اسم القائل / المصدر" class="spaced-input">
+
+      <div class="section-divider"></div>
+      <div class="panel-heading compact"><div><span class="step">02 / المظهر</span><h2>القالب والتنسيق</h2></div></div>
+      <label class="field-label">اختر قالباً</label>
+      <div class="templates" id="templates">
+        <button class="template active" data-template="emerald"><span class="swatch emerald"></span><b>زمردي فاخر</b></button>
+        <button class="template" data-template="cream"><span class="swatch cream"></span><b>هادئ وبسيط</b></button>
+        <button class="template" data-template="midnight"><span class="swatch midnight"></span><b>ليلي أنيق</b></button>
+        <button class="template" data-template="earth"><span class="swatch earth"></span><b>تراثي دافئ</b></button>
+        <button class="template" data-template="sky"><span class="swatch sky"></span><b>سماء وسكينة</b></button>
+        <button class="template" data-template="rose"><span class="swatch rose"></span><b>وردي هادئ</b></button>
+      </div>
+
+      <div class="two-fields">
+        <div><label class="mini-label" for="format">مقاس البطاقة</label><select id="format"><option value="square">مربع 1080 × 1080</option><option value="portrait">منشور 1080 × 1350</option><option value="story">قصة 1080 × 1920</option></select></div>
+        <div><label class="mini-label" for="fontFamily">الخط العربي</label><select id="fontFamily"><option value="Cairo">Cairo</option><option value="Amiri">Amiri</option><option value="Noto Naskh Arabic">Noto Naskh</option></select></div>
+      </div>
+      <div class="two-fields">
+        <div><label class="mini-label" for="accentColor">لون الزخرفة</label><input type="color" id="accentColor" value="#d9b66f"></div>
+        <div><label class="mini-label" for="textScale">حجم النص</label><input type="range" id="textScale" min="85" max="125" value="100"></div>
+      </div>
+
+      <div class="section-divider"></div>
+      <div class="panel-heading compact"><div><span class="step">03 / الصورة</span><h2>أضف صورة</h2></div><button class="text-btn" id="removeImage">إزالة</button></div>
+      <label class="upload-box" for="imageInput"><span class="upload-icon">＋</span><b>اختر صورة من جهازك</b><small>PNG أو JPG أو WEBP</small><input type="file" id="imageInput" accept="image/*"></label>
+      <div class="image-controls" id="imageControls" hidden><label class="mini-label" for="imageOpacity">شفافية الصورة</label><input type="range" id="imageOpacity" min="10" max="100" value="38"><label class="mini-label" for="imagePosition">موضع الصورة</label><select id="imagePosition"><option value="cover">خلفية كاملة</option><option value="top">أعلى البطاقة</option><option value="bottom">أسفل البطاقة</option></select></div>
+
+      <div class="section-divider"></div>
+      <div class="panel-heading compact"><div><span class="step">04 / ترتيب العناصر</span><h2>تحكم بالظهور</h2></div></div>
+      <p class="hint">اسحب العناصر لترتيبها داخل البطاقة.</p>
+      <div id="orderList" class="order-list">
+        <div class="order-item" draggable="true" data-key="main"><span>⠿</span> النص الأساسي</div>
+        <div class="order-item" draggable="true" data-key="verse"><span>⠿</span> الآية القرآنية</div>
+        <div class="order-item" draggable="true" data-key="hadith"><span>⠿</span> الحديث النبوي</div>
+        <div class="order-item" draggable="true" data-key="quote"><span>⠿</span> القول والاقتباس</div>
+      </div>
+      <div class="editor-bottom"><button class="secondary-btn" id="saveBtn">حفظ التصميم</button><button class="primary-btn" id="autoBtn">✦ صمّم لي تلقائياً</button></div>
+    </aside>
+
+    <section class="preview-panel">
+      <div class="preview-head"><div><span class="step">معاينة مباشرة</span><h2>بطاقتك الآن</h2></div><div class="preview-tools"><button id="zoomOut" title="تصغير">−</button><button id="zoomIn" title="تكبير">＋</button></div></div>
+      <div class="preview-stage">
+        <article id="card" class="card theme-emerald format-square">
+          <div class="card-image" id="cardImage"></div>
+          <div class="card-pattern"></div>
+          <div class="card-inner">
+            <div class="card-top"><span class="ornament">۞</span><span id="topLabel">تَذْكِرَةٌ طَيِّبَة</span><span class="ornament">۞</span></div>
+            <div id="cardContent" class="card-content"></div>
+            <div class="card-footer"><span></span><b>وَذَكِّرْ فَإِنَّ الذِّكْرَى تَنْفَعُ الْمُؤْمِنِينَ</b><span></span></div>
+          </div>
+        </article>
+      </div>
+      <div class="preview-foot"><span class="live-dot"></span> تتحدث المعاينة تلقائياً أثناء الكتابة <span class="preview-size" id="previewSize">1080 × 1080</span></div>
+      <div class="notice"><span>ⓘ</span><p>تنبيه: يُرجى التحقق من صحة الآيات والأحاديث ومصادرها قبل النشر. التطبيق يحافظ على النص الذي تدخله ولا يصححه أو ينسبه تلقائياً.</p></div>
+    </section>
+  </div>
+</main>
+
+<div class="modal-backdrop" id="savedModal" hidden>
+  <section class="modal"><div class="modal-head"><h2>تصميماتي المحفوظة</h2><button class="close-btn" id="closeModal">×</button></div><div id="savedList" class="saved-list"></div></section>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<footer>بطاقتي الإيمانية <span>•</span> صُمّم ليكون الذكر أثراً جميلاً</footer>
+<script src="app.js"></script>
+</body>
+</html>
